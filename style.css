@@ -191,3 +191,60 @@ body {
     6px 0 30px rgba(139, 92, 246, 0.2);
   pointer-events: none;
 }
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar nav {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .navbar nav a {
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+
+  /* Main layout */
+  .container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Pages */
+  .page {
+    padding: 20px;
+  }
+
+  .page h1 {
+    font-size: 1.9rem;
+  }
+
+  /* Cards */
+  .card,
+  .side-card {
+    padding: 20px;
+  }
+
+  .bottom-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Inputs */
+  .input {
+    font-size: 1rem;
+  }
+}
+
