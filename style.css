@@ -247,4 +247,48 @@ body {
     font-size: 1rem;
   }
 }
+/* =========================
+   NAVBAR POLISH (ALL SCREENS)
+========================= */
+
+.navbar {
+  background: rgba(11, 13, 18, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.navbar nav a {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.navbar nav a:hover {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--accent);
+}
+/* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    align-items: stretch;
+  }
+
+  .navbar nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .navbar nav a {
+    text-align: center;
+    background: rgba(21, 24, 33, 0.9);
+  }
+}
+
 
