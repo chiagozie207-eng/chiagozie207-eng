@@ -1,0 +1,193 @@
+:root {
+  --bg: #0b0d12;
+  --card: #151821;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #8b5cf6;
+  --gold: #facc15;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.main h1 {
+  margin-bottom: 25px;
+}
+
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.highlight {
+  border-left: 4px solid var(--accent);
+}
+
+.secondary {
+  border-left: 4px solid var(--gold);
+}
+
+.sidebar .side-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.side-card.gold {
+  border-left: 4px solid var(--gold);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.page {
+  padding: 40px;
+  max-width: 800px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+/* Home Page Background Image */
+body {
+  margin: 0;
+  background:
+    linear-gradient(
+      rgba(11, 13, 18, 0.88),
+      rgba(11, 13, 18, 0.96)
+    ),
+    url("bg-home.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+}
+.card,
+.side-card {
+  background: rgba(21, 24, 33, 0.8);
+  backdrop-filter: blur(10px);
+}
+/* =========================
+   NEWS PAGE
+========================= */
+
+.page article {
+  margin-bottom: 40px;
+}
+
+.page article h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.page article p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* subtle divider between articles */
+.page article:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 30px;
+}
+/* =========================
+   PURPLE & YELLOW ACCENT GLOW
+========================= */
+
+/* News page accent */
+.news-page article {
+  position: relative;
+  border-left: 4px solid var(--accent);
+}
+
+.news-page article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  box-shadow:
+    -8px 0 30px rgba(139, 92, 246, 0.25),
+    6px 0 30px rgba(250, 204, 21, 0.15);
+  pointer-events: none;
+}
+
+/* Discussion page accent */
+.discussion-page .card {
+  position: relative;
+  border-left: 4px solid var(--gold);
+}
+
+.discussion-page .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  box-shadow:
+    -8px 0 30px rgba(250, 204, 21, 0.25),
+    6px 0 30px rgba(139, 92, 246, 0.2);
+  pointer-events: none;
+}
